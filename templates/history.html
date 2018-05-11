@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  HISTORY!
+{% endblock %}
+{% block main %}
+<table style="width:100%">
+ <tr>
+    <th>USERNAME</th>
+    <th>STOCKSYMBOL</th>
+    <th>TRANSACTION</th>
+    <th>CASH</th>
+    <th>DATETIME</th>
+ </tr>
+{%for row in r%}
+<tr>
+    <th>{{row["username"]}}</th>
+    <th>{{row["stocksymbol"]}}</th>
+    <th>{{row["transaction"]}}</th>
+    <th>{{row["cash"]}}</th>
+    <th>{{row["datetime"]}}</th>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

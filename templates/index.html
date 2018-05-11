@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   WELCOME! THIS IS THE INDEX PAGE
+{% endblock %}
+{% block main %}
+<table style="width:100%">
+ <tr>
+    <th>STOCK SYMBOL</th>
+    <th>NUMBER OF SHARES</th>
+    <th>CURRENT PRICE OF THE STOCK</th>
+    <th>VALUE OF HOLDING</th>
+ </tr>
+{%for stock in stocks%}
+<tr>
+    <th>{{stock.stocksym}}</th>
+    <th>{{stock.num}}</th>
+    <th>{{stock.current}}</th>
+    <th>{{stock.holding}}</th>
+</tr>
+{% endfor %}
+</table>
+<p>CASH AVAILABLE IS {{c2}}</p>
+<p>GRAND TOTAL={{total}}</p>
+
+
+{% endblock %}
